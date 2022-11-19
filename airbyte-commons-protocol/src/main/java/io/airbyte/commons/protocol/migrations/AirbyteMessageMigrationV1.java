@@ -12,6 +12,7 @@ import io.airbyte.commons.json.Jsons;
 import io.airbyte.commons.version.Version;
 import io.airbyte.protocol.models.AirbyteMessage;
 import io.airbyte.protocol.models.AirbyteStream;
+import io.airbyte.protocol.models.ConfiguredAirbyteCatalog;
 import io.airbyte.protocol.models.JsonSchemaReferenceTypes;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -22,6 +23,12 @@ import java.util.function.Function;
 import java.util.stream.StreamSupport;
 
 public class AirbyteMessageMigrationV1 implements AirbyteMessageMigration<io.airbyte.protocol.models.v0.AirbyteMessage, AirbyteMessage> {
+
+  private ConfiguredAirbyteCatalog catalog;
+
+  public AirbyteMessageMigrationV1(ConfiguredAirbyteCatalog catalog) {
+    this.catalog = catalog;
+  }
 
   @Override
   public io.airbyte.protocol.models.v0.AirbyteMessage downgrade(AirbyteMessage oldMessage) {
