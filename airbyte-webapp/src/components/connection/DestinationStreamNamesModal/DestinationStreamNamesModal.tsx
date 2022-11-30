@@ -3,7 +3,7 @@ import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import * as yup from "yup";
 
-import { LabeledRadioButton } from "components/index";
+import { LabeledRadioButton } from "components";
 import { Button } from "components/ui/Button";
 import { Input } from "components/ui/Input";
 import { ModalBody, ModalFooter } from "components/ui/Modal";
