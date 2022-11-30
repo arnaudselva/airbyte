@@ -102,6 +102,7 @@ export const CatalogTreeTableHeader: React.FC = () => {
       <TextCell flex={1}>
         <FormattedMessage id="form.namespace" />
         <Button
+          type="button"
           variant="clear"
           onClick={() =>
             openModal({
@@ -126,6 +127,7 @@ export const CatalogTreeTableHeader: React.FC = () => {
       <TextCell flex={1}>
         <FormattedMessage id="form.streamName" />
         <Button
+          type="button"
           variant="clear"
           onClick={() =>
             openModal({
